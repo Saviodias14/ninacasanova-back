@@ -1,0 +1,51 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Gifts {
+  id          Int      @id @default(autoincrement())
+  name        String   @unique @db.VarChar(255)
+  description String
+  image       String
+  price       Int
+  avaliable   Boolean  @default(true)
+  Gifters     Gifters?
+
+  @@map("gifts")
+}
+
+model Invites {
+  id        Int    @id @default(autoincrement())
+  name      String @unique @db.VarChar(255)
+  phone     String @unique
+  companion Int
+
+  @@map("invites")
+}
+
+model Messages {
+  id      Int    @id @default(autoincrement())
+  name    String @db.VarChar(255)
+  message String
+
+  @@map("messages")
+}
+
+model Gifters {
+  id      Int    @id @default(autoincrement())
+  giftId  Int    @unique
+  name    String @db.VarChar(255)
+  phone   String
+  message String
+  Gift    Gifts  @relation(fields: [giftId], references: [id])
+
+  @@map("gifters")
+}
