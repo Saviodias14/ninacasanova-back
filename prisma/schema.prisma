@@ -23,10 +23,10 @@ model Gifts {
 }
 
 model Invites {
-  id        Int    @id @default(autoincrement())
-  name      String @unique @db.VarChar(255)
-  phone     String @unique
-  companion Int
+  id        Int     @id @default(autoincrement())
+  name      String  @unique @db.VarChar(255)
+  phone     String  @unique
+  companion Boolean @default(false)
 
   @@map("invites")
 }

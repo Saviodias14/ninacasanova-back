@@ -1,4 +1,4 @@
-import { Gifts } from "@prisma/client";
+import { Gifts, Invites } from "@prisma/client";
 
 export type ApplicationError = {
     name: string;
@@ -6,3 +6,4 @@ export type ApplicationError = {
 }
 
 export type GiftBody = Omit<Omit<Gifts, 'id'>, 'avaliable'>
+export type InviteBody = Omit<Invites, 'id'>
