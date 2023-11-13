@@ -9,7 +9,7 @@ const giftRouter = Router()
 giftRouter
 .post('/', validateBody(giftsSchema), giftController.createGift)
 .get('/', giftController.getGifts)
-.put('')
-.delete('')
+.put('/:id', validateBody(giftsSchema), giftController.updateGift)
+.delete('/:id', giftController.deleteGift)
 
 export default giftRouter

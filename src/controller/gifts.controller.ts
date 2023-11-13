@@ -14,3 +14,25 @@ export async function getGifts(req:Request, res: Response){
     const result =  await giftService.getGifts()
     res.send(result)
 }
+
+export async function updateGift(req:Request, res: Response){
+    const data = req.body
+    const id = parseInt(req.params.id)
+    if(isNaN(id)|| id<1){
+        return res.sendStatus(httpStatus.BAD_REQUEST).send('Invalid id')
+    }
+    const result = await giftService.updateGift(id, data)
+
+    res.sendStatus(httpStatus.OK).send(result)
+}
+
+export async function deleteGift(req:Request, res: Response){
+    const id = parseInt(req.params.id)
+    if(isNaN(id)|| id<1){
+        return res.sendStatus(httpStatus.BAD_REQUEST).send('Invalid id')
+    }
+
+    const result = await giftService.deleteGift(id)
+
+    res.sendStatus(httpStatus.OK).send(result)
+}
