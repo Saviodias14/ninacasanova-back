@@ -44,7 +44,7 @@ model Gifters {
   giftId  Int    @unique
   name    String @db.VarChar(255)
   phone   String
-  message String
+  message String?
   Gift    Gifts  @relation(fields: [giftId], references: [id])
 
   @@map("gifters")

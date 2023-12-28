@@ -7,6 +7,6 @@ const invitesRouter = Router()
 
 invitesRouter
     .post("/", validateBody(invitesSchema), invitesController.createInvite)
-    .get("", invitesController.getInvites)
+    .get("/", invitesController.getInvites)
     .delete("/:id", invitesController.deleteInvite)
 export default invitesRouter
