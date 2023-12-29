@@ -18,11 +18,7 @@
         "*"
       ]
     },
-    "plugins": [
-      {
-        "transform": "typescript-transform-paths"
-      }
-    ]
+    "plugins": []
   },
   "ts-node": {
     "esm": true

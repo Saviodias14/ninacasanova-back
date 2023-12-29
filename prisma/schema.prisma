@@ -6,18 +6,18 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider          = "postgresql"
+  url               = env("DATABASE_URL")
 }
 
 model Gifts {
-  id          Int      @id @default(autoincrement())
-  name        String   @unique @db.VarChar(255)
-  description String
-  image       String
-  price       Int
-  avaliable   Boolean  @default(true)
-  Gifters     Gifters?
+  id        Int      @id @default(autoincrement())
+  name      String   @unique @db.VarChar(255)
+  link      String
+  image     String
+  price     Int
+  avaliable Boolean  @default(true)
+  Gifters   Gifters?
 
   @@map("gifts")
 }
@@ -40,12 +40,12 @@ model Messages {
 }
 
 model Gifters {
-  id      Int    @id @default(autoincrement())
-  giftId  Int    @unique
-  name    String @db.VarChar(255)
+  id      Int     @id @default(autoincrement())
+  giftId  Int     @unique
+  name    String  @db.VarChar(255)
   phone   String
   message String?
-  Gift    Gifts  @relation(fields: [giftId], references: [id])
+  Gift    Gifts   @relation(fields: [giftId], references: [id])
 
   @@map("gifters")
 }

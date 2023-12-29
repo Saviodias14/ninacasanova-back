@@ -2,7 +2,7 @@
 CREATE TABLE "gifts" (
     "id" SERIAL NOT NULL,
     "name" VARCHAR(255) NOT NULL,
-    "description" TEXT NOT NULL,
+    "link" TEXT NOT NULL,
     "image" TEXT NOT NULL,
     "price" INTEGER NOT NULL,
     "avaliable" BOOLEAN NOT NULL DEFAULT true,
@@ -15,7 +15,7 @@ CREATE TABLE "invites" (
     "id" SERIAL NOT NULL,
     "name" VARCHAR(255) NOT NULL,
     "phone" TEXT NOT NULL,
-    "companion" INTEGER NOT NULL,
+    "companion" BOOLEAN NOT NULL DEFAULT false,
 
     CONSTRAINT "invites_pkey" PRIMARY KEY ("id")
 );
@@ -35,7 +35,7 @@ CREATE TABLE "gifters" (
     "giftId" INTEGER NOT NULL,
     "name" VARCHAR(255) NOT NULL,
     "phone" TEXT NOT NULL,
-    "message" TEXT NOT NULL,
+    "message" TEXT,
 
     CONSTRAINT "gifters_pkey" PRIMARY KEY ("id")
 );
