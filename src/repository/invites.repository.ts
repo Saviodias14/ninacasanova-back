@@ -1,5 +1,5 @@
-import { prisma } from "@/database";
-import { InviteBody } from "@/protocols";
+import { prisma } from "../database";
+import { InviteBody } from "../protocols";
 
 export async function createInvite(data: InviteBody) {
     return await prisma.invites.create({ data })

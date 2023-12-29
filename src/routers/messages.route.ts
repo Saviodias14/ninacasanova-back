@@ -1,7 +1,7 @@
-import { validateBody } from "@/middleware/schemaValidation";
-import messagesSchema from "@/schema/messages.schema";
+import { validateBody } from "../middleware/schemaValidation";
+import messagesSchema from "../schema/messages.schema";
 import { Router } from "express";
-import * as messagesController from '@/controller/messages.controller'
+import * as messagesController from '../controller/messages.controller'
 
 const messagesRouter = Router()
 

@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import * as giftService from "@/service/gifts.service"
+import * as giftService from "../service/gifts.service"
 import httpStatus from "http-status";
 
 export async function createGift(req:Request, res: Response){

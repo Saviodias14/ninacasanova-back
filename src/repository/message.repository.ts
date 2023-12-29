@@ -1,5 +1,5 @@
-import { prisma } from "@/database";
-import { MessageBody } from "@/protocols";
+import { prisma } from "../database";
+import { MessageBody } from "../protocols";
 
 export async function createMessage(data: MessageBody) {
     return await prisma.messages.create({ data })

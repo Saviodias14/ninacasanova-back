@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import * as invitesService from "@/service/invites.service"
+import * as invitesService from "../service/invites.service"
 import httpStatus from "http-status";
 
 export async function createInvite(req: Request, res: Response) {

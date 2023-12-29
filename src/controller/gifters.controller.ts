@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import httpStatus from "http-status";
-import * as giftersService from '@/service/gifters.service'
+import * as giftersService from '../service/gifters.service'
 
 
 export async function createGifters(req: Request, res: Response) {

@@ -1,5 +1,5 @@
-import { prisma } from "@/database";
-import { GiftersBody } from "@/protocols";
+import { prisma } from "../database";
+import { GiftersBody } from "../protocols";
 
 
 export async function createGifters(data: GiftersBody & { giftId: number }) {

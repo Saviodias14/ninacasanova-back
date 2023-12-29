@@ -1,6 +1,6 @@
-import notFoundError from '@/errors/notFoundError';
-import { MessageBody } from '@/protocols';
-import * as messageRepository from '@/repository/message.repository'
+import notFoundError from '../errors/notFoundError';
+import { MessageBody } from '../protocols';
+import * as messageRepository from '../repository/message.repository'
 
 export async function createMessage(data: MessageBody) {
     return await messageRepository.createMessage(data)

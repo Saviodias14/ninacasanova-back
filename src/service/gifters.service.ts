@@ -1,7 +1,7 @@
-import notFoundError from "@/errors/notFoundError";
-import { GiftersBody } from "@/protocols";
-import * as giftRepository from "@/repository/gifts.repository"
-import * as giftersRepository from "@/repository/gifters.repository"
+import notFoundError from "../errors/notFoundError";
+import { GiftersBody } from "../protocols";
+import * as giftRepository from "../repository/gifts.repository"
+import * as giftersRepository from "../repository/gifters.repository"
 
 
 export async function createGifters(id: number, data: GiftersBody) {

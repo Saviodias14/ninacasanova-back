@@ -1,7 +1,7 @@
-import conflictError from "@/errors/conflictError";
-import notFoundError from "@/errors/notFoundError";
-import { InviteBody } from "@/protocols";
-import * as invitesRepository from "@/repository/invites.repository"
+import conflictError from "../errors/conflictError";
+import notFoundError from "../errors/notFoundError";
+import { InviteBody } from "../protocols";
+import * as invitesRepository from "../repository/invites.repository"
 
 export async function createInvite(data: InviteBody) {
     const existName = await invitesRepository.findGiftByName(data.name)

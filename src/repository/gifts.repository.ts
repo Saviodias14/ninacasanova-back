@@ -1,5 +1,5 @@
-import { prisma } from "@/database";
-import { GiftBody } from "@/protocols";
+import { prisma } from "../database";
+import { GiftBody } from "../protocols";
 
 export async function findGiftByName(name: string) {
     return await prisma.gifts.findUnique({ where: { name } })

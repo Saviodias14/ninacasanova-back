@@ -1,7 +1,7 @@
-import conflictError from "@/errors/conflictError";
-import notFoundError from "@/errors/notFoundError";
-import { GiftBody } from "@/protocols";
-import * as giftRpository from "@/repository/gifts.repository"
+import conflictError from "../errors/conflictError";
+import notFoundError from "../errors/notFoundError";
+import { GiftBody } from "../protocols";
+import * as giftRpository from "../repository/gifts.repository"
 
 
 export async function createGift(data: GiftBody) {

@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import * as messageService from '@/service/message.service'
+import * as messageService from '../service/message.service'
 import httpStatus from "http-status";
 
 

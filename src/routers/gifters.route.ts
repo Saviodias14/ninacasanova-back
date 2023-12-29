@@ -1,7 +1,7 @@
-import { validateBody } from "@/middleware/schemaValidation";
-import { giftersSchema } from "@/schema/gifters.schema";
+import { validateBody } from "../middleware/schemaValidation";
+import { giftersSchema } from "../schema/gifters.schema";
 import { Router } from "express";
-import * as giftersController from "@/controller/gifters.controller"
+import * as giftersController from "../controller/gifters.controller"
 
 const giftersRouter = Router()
 
